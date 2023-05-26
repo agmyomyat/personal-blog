@@ -27,7 +27,9 @@ export default function Home(
       </div>
       <ul className="p-0 m-0 mt-5">
         {stories.map((story) => (
-          <StoryCard story={story} key={story.id} />
+          <div key={story.id} className="my-10">
+            <StoryCard story={story} />
+          </div>
         ))}
       </ul>
     </div>
