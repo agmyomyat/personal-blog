@@ -7,7 +7,7 @@ export function StoryCard({ story }: { story: ISbStoryData }) {
   return (
     <Card w={'700px'} maw={'100%'} className="p-0" radius="md">
       <Link href={`/blog/${story.full_slug}`} className="no-underline">
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row items-center justify-between space-y-20">
           <div>
             <Text weight={500} className="sm:text-3xl text-lg" color="#000000">
               {story.content.headline}
@@ -24,7 +24,7 @@ export function StoryCard({ story }: { story: ISbStoryData }) {
               {story.content.sub_headline}
             </Text>
           </div>
-          <AspectRatio ratio={16 / 9} maw={300} m={'auto'} w={150}>
+          <AspectRatio ratio={16 / 9} w={150} h={100}>
             <Image
               src={story.content.cover_image.filename}
               alt={story.content.cover_image.alt}
