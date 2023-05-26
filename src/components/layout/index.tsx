@@ -6,13 +6,13 @@ type Props = {
 };
 export function Layout({ children }: Props) {
   return (
-    <div className="flex mx-5 justify-center">
-      <div className="w-[700px] max-w-full">
+    <div className="flex mx-5 justify-center ">
+      <div className="w-[700px] max-w-full h-screen">
         <Link href="/" className="no-underline">
           <h1 className="text-red-400 mb-5">Aung Myo Myat</h1>
         </Link>
         {children}
-        <div className="relative bottom-0 mb-14">
+        <footer className=" my-14">
           <div className="flex gap-3">
             <Link
               href={GITHUB_LINK}
@@ -29,7 +29,7 @@ export function Layout({ children }: Props) {
               Facebook
             </Link>
           </div>
-        </div>
+        </footer>
       </div>
     </div>
   );
